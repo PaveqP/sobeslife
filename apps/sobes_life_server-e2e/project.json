@@ -1,0 +1,17 @@
+{
+  "name": "sobes_life_server-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "implicitDependencies": ["sobes_life_server"],
+  "targets": {
+    "e2e": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{e2eProjectRoot}"],
+      "options": {
+        "jestConfig": "apps/sobes_life_server-e2e/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "dependsOn": ["sobes_life_server:build"]
+    }
+  }
+}
