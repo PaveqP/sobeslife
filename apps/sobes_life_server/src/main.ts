@@ -1,8 +1,8 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
-import userRouter from './routes/user-routes';
-import authRouter from './routes/auth-routes';
+import { router as authRouter } from '@sobes-life-server/auth';
+// import authRouter from './routes/auth-routes';
 
 dotenv.config();
 
@@ -11,7 +11,6 @@ const port = process.env.PORT ? Number(process.env.PORT) : 3000;
 
 const app = express();
 app.use(bodyParser.json());
-app.use('/api/users', userRouter);
 app.use('/api/auth', authRouter);
 
 app.get('/', (req, res) => {
