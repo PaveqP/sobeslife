@@ -1,1 +1,2 @@
-export * from './lib/tests';
+export * from './lib/tests.controller';
+export * from './lib/tests.routes';
