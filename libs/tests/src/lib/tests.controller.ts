@@ -5,6 +5,8 @@ export function tests(): string {
   return 'tests';
 }
 
+console.log('test');
+
 export const getTestByParams = async (
   req: Request,
   res: Response,
