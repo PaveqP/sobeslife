@@ -4,7 +4,7 @@ import { NextFunction, Request, Response } from 'express';
 export function tests(): string {
   return 'tests';
 }
-
+console.log('test again');
 export const getTestByParams = async (
   req: Request,
   res: Response,
