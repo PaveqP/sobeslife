@@ -4,7 +4,6 @@ const wss = new WebSocketServer({ port: 8080 });
 
 const sessions: Map<string, { testId: number; progress: any[] }> = new Map();
 
-console.log('test');
 wss.on('connection', (ws) => {
   console.log('User connected');
 
